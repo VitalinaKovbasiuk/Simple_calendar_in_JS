@@ -87,3 +87,72 @@ nextBtn.addEventListener("click", () => {
 
 // Оновлення календаря при завантаженні сторінки
 updateCalendar();
+
+// simple example calendar in React.js
+
+// import React, { useState } from 'react';
+
+// function Calendar() {
+//   const [date, setDate] = useState(new Date());
+
+//   const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+//   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+//   const prevMonth = () => setDate(new Date(date.getFullYear(), date.getMonth() - 1));
+//   const nextMonth = () => setDate(new Date(date.getFullYear(), date.getMonth() + 1));
+
+//   const monthName = months[date.getMonth()];
+//   const year = date.getFullYear();
+
+//   const firstDayOfMonth = new Date(year, date.getMonth(), 1);
+//   const lastDayOfMonth = new Date(year, date.getMonth() + 1, 0);
+
+//   const daysInMonth = [];
+//   for (let i = 1; i <= lastDayOfMonth.getDate(); i++) {
+//     daysInMonth.push(i);
+//   }
+
+//   const firstWeekday = firstDayOfMonth.getDay();
+//   const blanksBefore = [];
+//   for (let i = 0; i < firstWeekday; i++) {
+//     blanksBefore.push(i);
+//   }
+
+//   const blanksAfter = [];
+//   const lastWeekday = lastDayOfMonth.getDay();
+//   for (let i = lastWeekday + 1; i <= 6; i++) {
+//     blanksAfter.push(i);
+//   }
+
+//   return (
+//     <div>
+//       <h2>{monthName} {year}</h2>
+//       <div>
+//         <button onClick={prevMonth}>Previous Month</button>
+//         <button onClick={nextMonth}>Next Month</button>
+//       </div>
+//       <table>
+//         <thead>
+//           <tr>
+//             {weekdays.map((day, index) => (
+//               <th key={index}>{day}</th>
+//             ))}
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {blanksBefore.map((day, index) => (
+//             <td key={`blank-before-${index}`}></td>
+//           ))}
+//           {daysInMonth.map((day, index) => (
+//             <td key={`day-${index}`}>{day}</td>
+//           ))}
+//           {blanksAfter.map((day, index) => (
+//             <td key={`blank-after-${index}`}></td>
+//           ))}
+//         </tbody>
+//       </table>
+//     </div>
+//   );
+// }
+
+// export default Calendar;
